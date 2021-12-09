@@ -1,0 +1,418 @@
+@font-face {
+    font-family:"Visby ELight" ;
+    src: url("/fonts/VisbyRoundCF-ExtraLight.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family:"Visby Light" ;
+    src: url("/fonts/VisbyRoundCF-Light.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family:"Visby Regular" ;
+    src: url("/fonts/VisbyRoundCF-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family:"Visby Medium" ;
+    src: url("/fonts/VisbyRoundCF-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family:"Visby DemiBold" ;
+    src: url("/fonts/VisbyRoundCF-DemiBold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family:"Visby Bold" ;
+    src: url("/fonts/VisbyRoundCF-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family:"Visby EBold" ;
+    src: url("/fonts/VisbyRoundCF-ExtraBold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  *{
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body, main {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+ 
+  header{
+      position: relative;
+      width: 100vw;
+      height: 86px;
+      background-color: #20242C;
+      z-index: 2;
+  }
+
+  nav{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      background-color: #A750F0;
+      display: block;
+      top: 0;
+      left: 0;
+  }
+
+  nav ul{
+      width: 275px;
+      margin-left: auto;
+      margin-right: auto;
+      list-style-type:none;
+      margin-top: 280px;
+  }
+  nav li{
+      font-family: "Visby Bold";
+      font-size:32px;
+      color: #F3CA3E;
+      margin-bottom: 18px;
+      margin-top: 18px;
+      padding-left: 6px;
+  }
+
+
+  #divider{
+      width: 100%;
+      height: 3px;
+      background-color: #75F7AC;
+      border-radius: 1.5px;
+  }
+
+  #hello{
+    font-family: "Visby Regular";
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    position: absolute;
+    top: 48px;
+    color:#F2F2F2 ;
+    left: 24px;   
+  }
+
+  #logo{
+      font-family: "Visby DemiBold";
+      font-size: 16px;
+      letter-spacing: 0.8px;
+      position: absolute;
+      top: 48px;
+      color:#F2F2F2 ;
+      right: 75px;
+  }
+
+  #hamburger{
+    position: absolute;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+	justify-content: center;
+    cursor: pointer;
+    right: 24px;
+    top: 35px;
+}
+
+#bar{
+    position: absolute;
+    width: 77%;
+    background-color: black;
+    height: 2px;
+    border-radius: 1.25px;
+    background-color: #F2F2F2;
+}
+
+#bar::before{
+	position: absolute;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	top:-7.5px;
+	border-radius: 1.25px;
+	transition: 0.4s;
+    background-color: #F2F2F2;
+}
+
+#bar::after{
+	position:absolute;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	top:7.4px;
+	border-radius: 1.25px;
+	transition: 0.4s;
+    background-color: #F2F2F2;
+}
+
+#close{
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-color:#A750F0;
+    top: 50.37px;
+    right: 24px;
+    transform: rotate(45deg);
+}
+
+
+
+#x::after{
+	position:absolute;
+	content: '';
+	display: block;
+	width: 73%;
+	height: 3.5px;
+	background-color: #F3CA3E;
+	border-radius: 1.5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+}
+
+#x::before{
+	position:absolute;
+	content: '';
+	display: block;
+	width: 73%;
+	height: 3.5px;
+	background-color: #F3CA3E;
+	border-radius: 1.5px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+    transform: rotate(90deg);
+}
+
+#wherePanel{
+    position: relative;
+    top: -220px;
+    left: 0;
+    background-color: #75F7AC;
+    width: 100vw;
+    height: 270px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 1;
+    transition: 1s;
+}
+
+#filters{
+    position: absolute;
+    top: 25px;
+    left: 58px;
+    right: 24px;
+}
+
+#filters button{
+    box-sizing: content-box;
+    font-family: "Visby DemiBold";
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    background-color:#75F7AC ;
+    border: 2px solid #F2F2F2;
+    height: 23.36px;
+    border-radius: 15px;
+    padding: 1px 15px;
+    margin: 4px;
+    color: #A750F0;
+}
+
+#routeOptns{
+    position: relative;
+    top: 115px;
+    left: 24px;
+    right: 24px;
+}
+
+#locationImg{
+    position: absolute;
+    top: 5px;
+}
+
+#routeOptns input{
+position: absolute;
+display: block;
+width: 60%;
+padding-bottom: 9px;
+top: 5px;
+left: 34px;
+border: 0px;
+border-bottom: 2px solid #A750F0 ;
+border-radius: 1px;
+background-color: #75F7AC;
+font-family: "Visby Regular";
+font-size: 12px;
+color:#29133B;
+letter-spacing: 0.5px;
+}
+
+#routeOptns input:nth-of-type(1){
+    top: 60px;
+}
+
+::placeholder{
+    font-family: "Visby Regular";
+    font-size: 12px;
+    color: #29133B;
+    padding-bottom: 1px;
+}
+
+#plus{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border:0px;
+    background-color: #A750F0;
+    right: 58px;
+    top: 39px;
+}
+
+#plus div::before{
+    position:absolute;
+	content: '';
+	display: block;
+	width: 45%;
+	height: 2px;
+	background-color: #F2F2F2;
+	border-radius: 1px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plus div::after{
+    position:absolute;
+	content: '';
+	display: block;
+	width: 45%;
+	height: 2px;
+	background-color: #F2F2F2;
+	border-radius: 1px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(90deg);
+}
+
+#outTab{
+    position: relative;
+    top: 230px;
+    left: 24px;
+    right: 24px;
+}
+
+#outTab h1{
+    position: absolute;
+    font-family: "Visby Medium";
+    font-size: 20px;
+    color: #29133B;
+}
+
+#outTab h1 span{
+    font-family: "Visby EBold";
+}
+
+#outTab button{
+    position: absolute;
+    top: -3px;
+    right: 58px;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    border:0px;
+    background-color: #A750F0;
+
+}
+
+#outTab button div{
+    position:absolute;
+	content: '';
+	display: block;
+	width: 45%;
+	height: 2px;
+	background-color: #F2F2F2;
+	border-radius: 1px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(90deg);
+}
+
+#outTab button div::before{
+    position:absolute;
+	content: '';
+	display: block;
+	width: 45%;
+	height: 2px;
+	background-color: #F2F2F2;
+	border-radius: 1px;
+    top:-2px;
+    left: 9px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(45deg);
+}
+
+#outTab button div::after{
+    position:absolute;
+	content: '';
+	display: block;
+	width: 45%;
+	height: 2px;
+	background-color: #F2F2F2;
+	border-radius: 1px;
+    top: 2px;
+    left: 9px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(-45deg);
+}
+
+#map{
+    position:absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
